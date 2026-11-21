@@ -1,0 +1,8 @@
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+# Si cambias el nombre de la carpeta, ajusta RewriteBase.
+RewriteBase /diplomado/ejemplo-1/public/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
